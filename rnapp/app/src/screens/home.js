@@ -42,8 +42,8 @@ export default function Home() {
                   <Image source={require('../assets/c.png')} style={{marginLeft:'5%'}}></Image>
               </View>
               <View style={{flexDirection:'row', display:'flex', marginHorizontal:'10%', marginTop:'5%'}}>
-              <Text style={{fontFamily:'G', fontSize:15, color:'#28324B'}}>        Join a cirlce</Text>
-              <TouchableOpacity onPress={()=>navigation.navigate('Monetary')}><Text style={{fontFamily:'G', fontSize:15, color:'#28324B'}}>                    Create a circle</Text></TouchableOpacity>
+              <TouchableOpacity onPress={()=>navigation.navigate('CircleJoin')}><Text style={{fontFamily:'G', fontSize:15, color:'#28324B'}}>        Join a cirlce</Text></TouchableOpacity>
+              <TouchableOpacity onPress={()=>navigation.navigate('CircleCreate')}><Text style={{fontFamily:'G', fontSize:15, color:'#28324B'}}>                    Create a circle</Text></TouchableOpacity>
               </View>
               
             </View>

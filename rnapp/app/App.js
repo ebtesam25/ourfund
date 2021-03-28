@@ -11,8 +11,12 @@ import Orient1 from './src/screens/orient1';
 import Orient2 from './src/screens/orient2';
 import Orient3 from './src/screens/orient3';
 import Home from './src/screens/home';
-
-
+import CircleCreate from './src/screens/circleCreate';
+import CircleJoin from './src/screens/circleJoin';
+import CircleView from './src/screens/circle';
+import VCirc from './src/screens/viewCircle';
+import Proposal from './src/screens/proposal';
+import VoteRes from './src/screens/voteRes';
 
 const Stack = createStackNavigator();
 
@@ -67,6 +71,37 @@ function MyStack() {
         component={Home} 
         options={{ headerShown: false}} 
       />
+      <Stack.Screen 
+        name="CircleCreate" 
+        component={CircleCreate} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="CircleJoin" 
+        component={CircleJoin} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Circle" 
+        component={CircleView} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Vcirc" 
+        component={VCirc} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Proposal" 
+        component={Proposal} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="VoteRes" 
+        component={VoteRes} 
+        options={{ headerShown: false}} 
+      />
+  
   
     
     
