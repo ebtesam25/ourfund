@@ -9,7 +9,7 @@ import { useFonts } from 'expo-font';
 
 
 
-export default function Welcome() {
+export default function Orient2() {
     const navigation = useNavigation();
     const [fontLoaded] = useFonts({
         G: require('../assets/fonts/G.ttf'),
@@ -33,14 +33,12 @@ export default function Welcome() {
             <View style={{ marginTop: '55%',}}>
               <Image source={require('../assets/logo.png')} style={styles.header} ></Image>
               <View style={{position:'relative', marginLeft:'10%', marginTop:'5%'}}>
-                <Text style={{fontFamily:'G', fontSize:40, color:'#F65158'}}>OurFund</Text>
-                <Text style={{fontFamily:'K', fontSize:25, color:'#000'}}>Democratized Lending Circles</Text>
+                <Text style={{fontFamily:'G', fontSize:25, color:'#000'}}>Lending<Text style={{fontFamily:'G', fontSize:25, color:'#F65158'}}> within the group</Text></Text>
+                
+                <Text style={{fontFamily:'K', fontSize:18, color:'#000', width:'90%'}}>Using OurFund, a virtual form of lending circles, you can lend/donate/gift money to members within the group.</Text>
               </View>
-              <View style={{backgroundColor:'#F65158', marginTop:'15%', width:'60%', alignSelf:'center', paddingVertical:'5%', borderRadius:10}}>
-                <TouchableOpacity><Text style={{textAlign:'center', color:'#FBDE44', fontFamily:'K', fontSize:18}} onPress={()=>navigation.navigate('Login')}>Sign In</Text></TouchableOpacity>
-              </View>
-              <View style={{backgroundColor:'#FFBF00', marginTop:'2.5%', width:'60%', alignSelf:'center', paddingVertical:'5%', borderRadius:10}}>
-              <TouchableOpacity onPress={()=>navigation.navigate('Register')}><Text style={{textAlign:'center', color:'#28324B', fontFamily:'K', fontSize:18}}>Create an Account</Text></TouchableOpacity>
+              <View style={{backgroundColor:'#FFBF00', marginTop:'15%', width:'60%', alignSelf:'center', paddingVertical:'5%', borderRadius:10}}>
+                <TouchableOpacity onPress={()=>navigation.navigate('Orient3')}><Text style={{textAlign:'center', color:'#28324B', fontFamily:'G', fontSize:14}}>Next</Text></TouchableOpacity>
               </View>
             </View>
         </View>
