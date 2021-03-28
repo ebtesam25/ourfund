@@ -17,6 +17,9 @@ import CircleView from './src/screens/circle';
 import VCirc from './src/screens/viewCircle';
 import Proposal from './src/screens/proposal';
 import VoteRes from './src/screens/voteRes';
+import CreateProposal from './src/screens/createProposal';
+import MD from './src/screens/makeDeposit';
+import DepositRes from './src/screens/depost';
 
 const Stack = createStackNavigator();
 
@@ -99,6 +102,21 @@ function MyStack() {
       <Stack.Screen 
         name="VoteRes" 
         component={VoteRes} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="CreateProposal" 
+        component={CreateProposal} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="MD" 
+        component={MD} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="DepositRes" 
+        component={DepositRes} 
         options={{ headerShown: false}} 
       />
   

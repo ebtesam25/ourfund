@@ -5,6 +5,7 @@ import Svg, { Line, Circle } from 'react-native-svg';
 import { Icon } from 'react-native-elements'
 import { useFonts } from 'expo-font';
 import { ToastAndroid } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 
@@ -25,7 +26,7 @@ export default function CircleCreate() {
     const [email, setEmail] = useState('');
     const [circlename, setCircleName] = useState('');
     const [password, setPassword] = useState('');
-    var names = ["Banana", "Orange", "Apple", "Mango"];
+    var names = ["John Doe", "Jane Doe"];
       
       if (!fontLoaded) {
         return null;
@@ -44,8 +45,9 @@ export default function CircleCreate() {
                   <Icon name="chevron-left" type="entypo" color="#F65158" size={35}></Icon>
                   <Text style={{fontFamily:'G', fontSize:30, color:'#F65158', textAlign:'right'}}>Create a circle</Text>
               </View>
-              <View style={{position:'relative', marginLeft:'10%', marginTop:'1%'}}>
-                <TextInput value={circlename} style={{backgroundColor:`rgba(255,191,0,0.25)`, borderRadius:10, width:'80%', height:50, marginTop:'10%', paddingLeft:'5%'}} placeholder="Name of the Circle" placeholderTextColor="#FFBF00"></TextInput>
+              
+              <View style={{position:'relative', marginLeft:'10%', marginTop:'1%', height:500}}><ScrollView>
+                <TextInput value={circlename} onChangeText={setCircleName} style={{backgroundColor:`rgba(255,191,0,0.25)`, borderRadius:10, width:'80%', height:50, marginTop:'10%', paddingLeft:'5%'}} placeholder="Name of the Circle" placeholderTextColor="#FFBF00"></TextInput>
                 <Text style={{fontFamily:'G', fontSize:20, color:'#28324B', marginTop:'10%'}}>Add Members</Text>
                 <View style={{flexDirection:'row', display:'flex', marginTop:'5%'}}>
                     <TextInput value={email}   style={{backgroundColor:`rgba(255,191,0,0.25)`, borderRadius:10, width:'80%', height:50, paddingLeft:'5%'}} placeholder="Email" onChangeText={(e)=>setEmail(e)} placeholderTextColor="#FFBF00"></TextInput>
@@ -67,10 +69,16 @@ export default function CircleCreate() {
       50
     )}><Text style={{backgroundColor:'#28324B', fontFamily:'K', fontSize:15,color:"#FFF", width:70, height:50, borderRadius:10, textAlign:'center', textAlignVertical:'center'}}>Copy</Text></TouchableOpacity>
                 </View>
-              </View>
+                <Text style={{fontFamily:'G', fontSize:20, color:'#28324B', marginTop:'10%'}}>Donation Budget per member (optional)</Text>
+                <TextInput style={{fontFamily:'K', color:'#28324B'}} placeholder='$'>
+                </TextInput>
+                <Text style={{fontFamily:'G', fontSize:20, color:'#28324B', marginTop:'10%'}}>Description</Text>
+                <TextInput style={{fontFamily:'K', color:'#28324B'}} placeholder='Tell us more about your lending circle'>
+                </TextInput>
+             </ScrollView></View>
               
               <View style={{marginTop:'2.5%', width:'60%', alignSelf:'center', borderRadius:10}}>
-              <TouchableOpacity onPress={()=>navigation.navigate('Register')}><Text style={{textAlign:'center', color:'#F65158', fontFamily:'G', fontSize:18, textDecorationLine:'underline', textDecorationColor:'#FBDE44', textDecorationStyle:'double', marginTop:'55%'}}>Create an  new account</Text></TouchableOpacity>
+              <TouchableOpacity onPress={()=>navigation.navigate('Register')}><Text style={{textAlign:'center', color:'#F65158', fontFamily:'G', fontSize:18, textDecorationLine:'underline', textDecorationColor:'#FBDE44', textDecorationStyle:'double', marginTop:'5%'}}>Create Circle</Text></TouchableOpacity>
               </View>
             </View>
             <View style={{backgroundColor:'#28324B', width:'100%', height:70, position:'absolute', bottom:0, paddingTop:'5%', flexDirection:'row', display:'flex', paddingHorizontal:'15%'}}>

@@ -49,7 +49,7 @@ export default function VCirc() {
 
               <ScrollView> 
                 <View style={{marginTop:'5%',backgroundColor:'#FFBF00',borderRadius:10, width:'80%', paddingHorizontal:'5%'}}>
-                <Text style={{fontFamily:'G', fontSize:15, color:'#000', marginVertical:'5%', textAlignVertical:'center', textAlign:'center'}}>Create your own proposal</Text>
+                <Text style={{fontFamily:'G', fontSize:15, color:'#000', marginVertical:'5%', textAlignVertical:'center', textAlign:'center'}} onPress={()=>navigation.navigate('CreateProposal')}>Create your own proposal</Text>
                 </View>
                 <View style={{marginTop:'5%',backgroundColor:'#FFBF00',borderRadius:10, width:'80%', paddingHorizontal:'5%'}}>
                 <Text style={{fontFamily:'G', fontSize:15, color:'#000', marginVertical:'5%', textAlignVertical:'center', textAlign:'center'}}>Make a Deposit</Text>
